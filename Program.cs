@@ -15,14 +15,14 @@ namespace Lab_3._3_Data_Structures
             {
                 reverseWord.Push(letterData[i]);
             }
-            
-            foreach(char c in letterData)
+
+            foreach (char c in letterData)
             {
                 char output = reverseWord.Pop();
 
                 Console.Write(output);
             }
- 
+
             return null;
         }
         //////////////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@ namespace Lab_3._3_Data_Structures
 
             string input = Console.ReadLine();
 
-            Regex reg = new Regex(@"[A-Z][a-z]"); // Check to make sure letters are the only thing input. No Numbers or Symbols.
+            Regex reg = new Regex(@"^[A-Za-z]*$"); // Check to make sure letters are the only thing input. No Numbers or Symbols.
 
             bool matched = reg.IsMatch(input);
 
@@ -44,11 +44,11 @@ namespace Lab_3._3_Data_Structures
             {
                 string answer = Reverse(input);
 
-                Console.WriteLine(answer);
+                //Console.WriteLine(answer);
             }
 
 
-            
+
 
         }
     }
